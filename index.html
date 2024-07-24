@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Menon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Rohit Menon</title>
+    <script src="https://kit.fontawesome.com/4e1c14cfd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="#" class="logo"><img src="images/rmlogo.png" class="img-resp" alt="website logo"></a>
+            <div class="navbar" id="navbar">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#academic-background">Academic Background</a></li>
+                    <li><a href="#coursework">Coursework</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Get in Touch</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="content">
+            <div class="greeting">
+                <h1>ROHIT MENON</h1>
+                <p>Software Engineering Student</p>
+            </div>
+            <div class="header-image">
+                <img src="images/DSC_1096.JPG" alt="Rohit Menon" class="profile-img">
+            </div>
+        </div>
+    </header>
+    <section class="intro" id="intro">
+        <h4>Welcome</h4>
+        <div class="aboutme">
+            <p>Hi, I am <span class="highlight">Rohit Menon</span>, a student at the University of Sheffield pursuing my software engineering bachelor's degree. I was born and raised in Dubai, UAE, completed my high school there, and then moved to Tamil Nadu, India, for my further studies. This website is a part of the COM1008 module of the Software Engineering BEng degree, serving as a personal portfolio. It features a navigation bar where you can learn about my degree, SGA, my skills, and try out a quiz. At the bottom, you'll find links to legal and security information, accessibility details, design concepts, testing, and a contact form for any inquiries related to the website.</p>
+        </div>
+    </section>
+    <section class="academic-background" id="academic-background">
+        <h4>Academic Background</h4>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h5>2014-2019</h5>
+                    <p>Our Own High School, Dubai, UAE</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h5>2019-2021</h5>
+                    <p>Velammal Vidyalaya, Chennai, India</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h5>2022-2025 (expected graduation)</h5>
+                    <p>University of Sheffield, United Kingdom</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="coursework" id="coursework">
+        <h4>Coursework</h4>
+        <p>Here are a few of my modules which equipped me with a diverse skill set:</p>
+        <ul class="course-list">
+            <li>Introduction to Software Engineering</li>
+            <li>Java Programming</li>
+            <li>Web Development</li>
+            <li>Introduction to Algorithms</li>
+            <li>Data Driven Computing</li>
+            <li>Systems Design and Security</li>
+            <li>Functional Programming (Haskell)</li>
+            <li>Software Hut</li>
+        </ul>
+    </section>
+    <section class="projects" id="projects">
+        <h4>Projects</h4>
+        <ul class="project-list">
+            <li class="project-item" data-description="Collaborated with a team of 6 to design and implement a web-based learning platform using HTML5 and CSS3 for the front-end, provide an intuitive and responsive user interface. Implemented the back-end functionality of the platform using Ruby and Sinatra, handling user authentication, course management, and routing to ensure a smooth user experience. Utilized SQLite3 as the database system to efficiently store and retrieve user profiles, course information and other relevant data, ensuring data integrity and performance. Solely responsible for the Implementation of secure user login feature and password reset functionality, as well as the implementation of advanced password encryption techniques to safeguard user credentials and sensitive Information, ensuring the platform's robust data security. Some parts of the project are still in development.">EDFLIX PROJECT</li>
+            <li class="project-item" data-description="Developed a student election system with Ruby on Rails, HTML, CSS, and JavaScript, focusing on client interaction and expectation management. Enhanced team collaboration and tackled practical challenges in constructing, managing, and deploying a medium-sized software project. Addressed professional issues such as security, privacy, and ethics, while providing comprehensive user documentation, training, and online support.">Election Masters</li>
+            <li class="project-item" data-description="Preprocess and load chessboard images dataset using Python. Implement PCA to reduce feature dimensionality and train a KNN classifier. Evaluate classifier performance and optimize parameters for improved accuracy.">Chessboard Diagram classifier</li>
+        </ul>
+        <div class="project-description" id="project-description"></div>
+    </section>
+    <section class="contact" id="contact">
+        <h4>Get in Touch</h4>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rohit-menon-376216228" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rohitrm13@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/_._rohit.18_._/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <!-- <ul class="footerlist">
+            <li class="footeritem"><a href="#contact">Contact</a></li>
+            <li class="footeritem"><a href="#legal-and-security">Legal and Security</a></li>
+            <li class="footeritem"><a href="#design">Design</a></li>
+            <li class="footeritem"><a href="#testing">Testing</a></li>
+            <li class="footeritem"><a href="#accessibility">Accessibility</a></li>
+        </ul> -->
+        <p class="copyright">&#169; 2022 ROHIT</p>
+    </footer>
+    <!--JavaScript for Navigation bar and Projects-->
+    <script>
+        let navbar = document.getElementById("navbar");
+        function openMenu() {
+            navbar.style.right = "0";
+        }
+        function closeMenu(){
+            navbar.style.right = "-200px";
+        }
+
+        // JavaScript for Project Descriptions
+        document.querySelectorAll('.project-item').forEach(item => {
+            item.addEventListener('click', event => {
+                const description = event.target.getAttribute('data-description');
+                const descriptionBox = document.getElementById('project-description');
+                
+                if (descriptionBox.innerHTML === description) {
+                    descriptionBox.innerHTML = '';
+                    descriptionBox.classList.remove('show');
+                } else {
+                    descriptionBox.innerHTML = description;
+                    descriptionBox.classList.add('show');
+                }
+            });
+        });
+    </script>   
+</body>
+</html>

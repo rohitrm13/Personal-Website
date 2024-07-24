@@ -1,0 +1,448 @@
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Other existing CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #2b2b2b; /* Change the background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(80, 77, 77, 0.7);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  position: fixed;
+  right: -200px;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  background: rgba(80, 77, 77, 0.7);
+  color: #fff;
+  transition: right 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar ul li {
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+  background: #575757;
+}
+
+nav .fa-solid {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+nav .fa-solid:hover {
+  color: #f4f4f9;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  margin-top: 80px; /* To avoid overlap with fixed nav */
+}
+
+.greeting {
+  text-align: center;
+}
+
+.greeting h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.greeting p {
+  font-size: 1.2rem;
+}
+
+.header-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.profile-img {
+  max-width: 80%; /* Adjust this value to reduce the size */
+  height: auto;
+  border-radius: 10px;
+}
+
+.intro, .academic-background, .coursework, .projects, .contact {
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.intro h4, .academic-background h4, .coursework h4, .projects h4, .contact h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.aboutme p, .academic-list li, .course-list li, .project-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.aboutme .highlight {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.academic-background .timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
+.academic-background .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%; /* Position the line to the left */
+  width: 4px;
+  height: 100%;
+  background: #e63946;
+}
+
+.academic-background .timeline-item {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.academic-background .timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.academic-background .timeline-item:nth-child(even) {
+  left: 0; /* Align all items to the left */
+}
+
+.academic-background .timeline-content {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.academic-background .timeline-content h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #e63946;
+}
+
+.academic-background .timeline-content p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.academic-background .timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -6px; /* Position the dot to the left */
+  width: 12px;
+  height: 12px;
+  background: #e63946;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.coursework p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.course-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-list li {
+  background: #f4f4f9;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.projects .project-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.projects .project-item {
+  background: #f4f4f9;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.projects .project-item:hover {
+  background: #333;
+  color: #fff;
+}
+
+.project-description {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  color: #333;
+}
+
+.project-description.show {
+  display: block;
+  opacity: 1;
+}
+
+.contact .social-icons {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.contact .social-icons a {
+  margin: 0 1rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.contact .social-icons a:hover {
+  color: #e63946;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #e63946;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative; /* Change to relative */
+  width: 100%;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  display: inline;
+  margin: 0 0.5rem;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #e63946;
+}
+
+.footer p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Add padding to the bottom of the main content */
+.intro {
+  padding-bottom: 60px; /* Adjust the value as needed */
+}
+
+/* For Tablet */
+@media (min-width: 576px) {
+  .content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+  }
+
+  .greeting {
+      flex: 1;
+      padding-right: 2rem;
+  }
+
+  .header-image {
+      flex: 1;
+      justify-content: flex-end;
+      margin-top: 0;
+  }
+
+  .profile-img {
+      max-width: 60%;
+  }
+
+  .academic-background .timeline-item {
+      width: 80%;
+  }
+
+  .academic-background .timeline-item:nth-child(odd) {
+      left: 0;
+  }
+
+  .academic-background .timeline-item:nth-child(even) {
+      left: 0;
+  }
+
+  .academic-background .timeline-content {
+      text-align: left;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 992px) {
+  .greeting h1 {
+      font-size: 4rem;
+  }
+
+  .greeting p {
+      font-size: 1.8rem;
+  }
+
+  .intro h4, .academic-background h4, .coursework h4, .projects h4, .contact h4 {
+      font-size: 2.5rem;
+  }
+
+  .profile-img {
+      max-width: 50%;
+  }
+}
