@@ -290,11 +290,7 @@ nav .fa-solid:hover {
   opacity: 1;
 }
 
-.contact{
-  background: rgb(131, 129, 129);
-}
-
-.contact .social-icons {
+.footer .social-icons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,8 +299,8 @@ nav .fa-solid:hover {
 
 .icon {
   text-decoration: none;
-  width: 3.625rem;
-  height: 3.625rem;
+  width: 2.625rem;
+  height: 2.625rem;
   border-radius: 14px;
   /* background-color: hsla(209 20% 70% / 20%); */ /* For dark theme */
   background-color: #fff;
@@ -362,48 +358,6 @@ nav .fa-solid:hover {
 }
 .icon:has(.fa-github) {
   --color: #333;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  text-align: left;
-}
-
-.contact-form .form-group {
-  margin-bottom: 1rem;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background: #e63946;
 }
 
 .footer {
