@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Menon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Rohit Menon - Resume</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .resume-section {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .resume-section h4 {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+        }
+
+        .pdf-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .pdf-container embed {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="resume-section">
+        <h4>My Resume</h4>
+        <div class="pdf-container">
+            <embed src="resume.pdf" type="application/pdf" title="Embedded PDF Viewer" />
+        </div>
+    </section>
+</body>
+</html>

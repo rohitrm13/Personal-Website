@@ -129,6 +129,23 @@ nav .fa-solid:hover {
   font-size: 1.2rem;
 }
 
+.greeting .btn-resume {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.greeting .btn-resume:hover {
+  background-color: #e63946;
+  transform: scale(1.05);
+}
+
 .header-image {
   display: flex;
   justify-content: center;
